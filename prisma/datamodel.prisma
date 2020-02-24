@@ -1,0 +1,15 @@
+type Discoverer {
+    id: Int! @id
+    firstName: String
+    lastName: String
+    elements: [Element]
+  }
+
+  type Element {
+    id: Int! @id
+    discoverer: Discoverer
+    atomicNumber: Int!
+    atomicMass: Float!
+    symbol: String!
+    name: String!
+  }

@@ -2,6 +2,8 @@ import { resolvers } from './gql/resolvers';
 import { typeDefs } from './gql/schema';
 
 const { ApolloServer } = require('apollo-server-express');
+const { prisma } = require('./generated/prisma-client')
+
 const express = require('express');
 
 const gqlApp = express();
@@ -11,7 +13,8 @@ const localPort = 8001;
 
 const server = new ApolloServer({
   typeDefs,
-  resolvers
+  resolvers,
+  context: { prisma }
 });
 
 server.applyMiddleware({ app: gqlApp });

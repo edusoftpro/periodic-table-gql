@@ -1,12 +1,14 @@
 export const typeDefs = `
   # the schema allows the following query:
   type Query {
+    elements: [Element]
     discoverer(id: Int!): Discoverer
     discoverers: [Discoverer]
     element(id: Int!): Element
     elementByAtomicNumber(atomicNumber: Int!): Element
     elementBySymbol(symbol: String!): Element
-    elements: [Element]
+    dbElements: [Element]
+
   }
 
   type Mutation {

@@ -12,6 +12,6 @@
     ],
     "ignorePaths": [
         "**/node_modules/**",
-        "**/data/**"
+        "**/{data,generated}/**"
     ]
 }
