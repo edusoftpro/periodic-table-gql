@@ -1,0 +1,17 @@
+{
+    "version": "0.1",
+    "words": [
+        "datasource",
+        "giql",
+        "graphiql",
+        "testconf",
+        "Привет"
+    ],
+    "flagWords": [
+        "hte"
+    ],
+    "ignorePaths": [
+        "**/node_modules/**",
+        "**/data/**"
+    ]
+}
