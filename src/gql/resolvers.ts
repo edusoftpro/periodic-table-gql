@@ -1,15 +1,19 @@
 import { discoverers } from '../data/discoverers';
 import { elements } from '../data/elements';
 const { filter, find } = require('lodash');
+const { prisma } = require('../generated/prisma-client')
 
 export const resolvers = {
     Query: {
+        elements: () => elements,
         discoverer: (_, { id }) => find(discoverers, { id }),
         discoverers: () => discoverers,
         element: (_, { id }) => find(elements, { id }),
         elementByAtomicNumber: (_, { atomicNumber }) => find(elements, { atomicNumber }),
         elementBySymbol: (_, { symbol }) => find(elements, { symbol }),
-        elements: () => elements,
+        dbElements: async () => {
+            return await prisma.elements();
+        },
     },
 
     Mutation: {
