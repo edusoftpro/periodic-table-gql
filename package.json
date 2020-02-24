@@ -1,0 +1,71 @@
+{
+  "name": "periodic-table-gql",
+  "version": "1.0.0",
+  "description": "GraphQL implementation of periodic table",
+  "main": "server.ts",
+  "scripts": {
+    "build": "npm run clean && tsc --p .",
+    "clean": "rimraf ./dist/*",
+    "debug": "npm run build && npm run watch-debug",
+    "dev": "cls && ts-node src/server.ts",
+    "lint": "tsc --noEmit && eslint \"**/*.{js,ts}\" --quiet --fix",
+    "serve": "npm run build && npm run dev",
+    "spell:check": "cspell \"**/*.{csv,js,md,ts}\"",
+    "start": "npm run build && ts-node dist/server.js",
+    "test": "jest --forceExit --coverage --verbose",
+    "m": "npm install && npm run dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edusoftpro/periodic-table-gql.git"
+  },
+  "keywords": [
+    "GQL"
+  ],
+  "author": "ABala",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/edusoftpro/periodic-table-gql/issues"
+  },
+  "homepage": "https://github.com/edusoftpro/periodic-table-gql#readme",
+  "dependencies": {
+    "apollo-datasource-rest": "^0.7.0",
+    "apollo-link": "^1.2.13",
+    "apollo-link-http": "^1.5.16",
+    "apollo-link-ws": "^1.0.19",
+    "apollo-server": "^2.10.1",
+    "apollo-server-express": "^2.10.1",
+    "apollo-utilities": "^1.3.3",
+    "async": "^3.1.1",
+    "express": "^4.17.1",
+    "express-graphql": "^0.9.0",
+    "graphql": "^14.6.0",
+    "graphql-tools": "^4.0.7"
+  },
+  "devDependencies": {
+    "@types/async": "^3.0.2",
+    "@types/body-parser": "^1.17.1",
+    "@types/chai": "^4.2.3",
+    "@types/cors": "^2.8.6",
+    "@types/errorhandler": "^0.0.32",
+    "@types/eslint": "^6.1.1",
+    "@typescript-eslint/eslint-plugin": "^2.20.0",
+    "@typescript-eslint/parser": "^2.20.0",
+    "@types/express": "^4.17.1",
+    "@types/jest": "^24.0.23",
+    "@types/node": "^12.7.8",
+    "babel-eslint": "^10.0.3",
+    "chai": "^4.2.0",
+    "comment-json": "^3.0.2",
+    "cspell": "^4.0.53",
+    "eslint": "^6.4.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-prettier": "^3.1.2",
+    "lodash": "^4.17.15",
+    "prettier": "^1.19.1",
+    "rimraf": "^3.0.2",
+    "shelljs": "^0.8.3",
+    "ts-node": "^8.4.1",
+    "typescript": "^3.8.2"
+  }
+}
