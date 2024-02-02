@@ -29,7 +29,7 @@
   },
   "homepage": "https://github.com/edusoftpro/periodic-table-gql#readme",
   "dependencies": {
-    "apollo-datasource-rest": "^0.15.0",
+    "apollo-datasource-rest": "^3.7.0",
     "apollo-link": "^1.2.13",
     "apollo-link-http": "^1.5.16",
     "apollo-link-ws": "^1.0.19",
